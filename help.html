@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Help - Sheet Set Excel Editor</title>
+<style>
+:root{--dark:#1f2933;--dark2:#334e68;--blue:#0067b8;--light:#f5f7fa;--border:#d9e2ec;--text:#1f2933;--muted:#52606d}
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;color:var(--text);line-height:1.65;background:white}
+a{color:var(--blue)}
+header{background:linear-gradient(135deg,var(--dark),var(--dark2));color:white;padding:50px 20px;text-align:center}
+header h1{font-size:2.5rem;margin:0 0 10px}.container{max-width:1000px;margin:0 auto;padding:40px 20px}
+nav{background:var(--light);border:1px solid var(--border);border-radius:10px;padding:18px;margin-bottom:35px}nav a{display:inline-block;margin:5px 14px 5px 0;font-weight:600;text-decoration:none}
+section{margin-bottom:42px}h2{font-size:1.9rem;border-bottom:1px solid var(--border);padding-bottom:8px}h3{font-size:1.25rem;margin-top:24px}
+.box{background:var(--light);border:1px solid var(--border);border-radius:10px;padding:18px}code{background:var(--light);border:1px solid var(--border);border-radius:4px;padding:2px 5px}
+ol,ul{padding-left:24px}footer{background:var(--dark);color:white;text-align:center;padding:25px 20px}footer a{color:white}
+</style>
+</head>
+<body>
+<header>
+    <h1>Sheet Set Excel Editor for AutoCAD</h1>
+    <p>Export, edit and import AutoCAD Sheet Set data using Microsoft Excel.</p>
+</header>
+<main class="container">
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#workflow">Workflow</a>
+    <a href="#commands">Commands</a>
+    <a href="#workbook">Workbook Structure</a>
+    <a href="#safety">Validation and Safety</a>
+    <a href="#troubleshooting">Troubleshooting</a>
+    <a href="support.html">Support</a>
+</nav>
+<section id="overview">
+    <h2>Overview</h2>
+    <p>Sheet Set Excel Editor for AutoCAD helps CAD managers, designers, drafters, and engineering teams manage Sheet Set data more efficiently. The application exports data from an AutoCAD Sheet Set DST file to a structured Excel workbook, allows users to edit properties in Excel, validates changes, and imports updates back into the selected Sheet Set.</p>
+    <p>The tool is designed to reduce repetitive manual editing in the AutoCAD Sheet Set Manager. Instead of opening each sheet one by one to update custom properties, users can edit multiple sheets at once using familiar spreadsheet tools.</p>
+</section>
+<section id="workflow">
+    <h2>Main Workflow</h2>
+    <ol>
+        <li>Open AutoCAD or Civil 3D.</li>
+        <li>Go to the Add-ins ribbon tab.</li>
+        <li>Use Export to select a Sheet Set DST file.</li>
+        <li>Save the exported Excel workbook.</li>
+        <li>Open the XLSX file in Microsoft Excel.</li>
+        <li>Edit Sheet Custom Properties, Sheet Set Custom Properties, or create new custom properties.</li>
+        <li>Close Excel.</li>
+        <li>Use Validate to review detected changes and warnings.</li>
+        <li>Use Import to apply the validated changes back to the selected DST file.</li>
+        <li>The application automatically creates a backup of the original DST file before applying changes.</li>
+    </ol>
+</section>
+<section id="commands">
+    <h2>Ribbon Commands</h2>
+    <h3>Export</h3>
+    <p>Exports Sheet Set data from a selected DST file to an Excel workbook. The exported workbook includes structured worksheets for sheet-level custom properties, sheet set custom properties, new custom property creation, sheet information, and technical reference data.</p>
+    <h3>Validate</h3>
+    <p>Compares the selected Excel workbook against the selected DST file and reports the number of detected changes. Validation does not modify the DST file. Use this step before importing to confirm that the expected changes will be applied.</p>
+    <h3>Import</h3>
+    <p>Imports validated Excel changes back into the selected DST file. Before making changes, the application creates an automatic backup of the original DST file in the same folder.</p>
+    <h3>About</h3>
+    <p>Displays the product version, author, website, support email, and help page link.</p>
+    <h3>Help</h3>
+    <p>Opens this online help page.</p>
+</section>
+<section id="workbook">
+    <h2>Excel Workbook Structure</h2>
+    <h3>Instructions</h3><p>Provides basic workbook guidance and usage notes.</p>
+    <h3>Settings</h3><p>Contains import-related settings used by the workbook workflow.</p>
+    <h3>SheetCustom_Matrix</h3><p>The main worksheet for editing Sheet Custom Properties. Each row represents a sheet, and each custom property is displayed as a column. This format is designed for efficient batch editing.</p>
+    <p>Visible columns include SheetNumber, ImportMode, and custom property columns. Technical matching columns are hidden to protect the import workflow.</p>
+    <p>ImportMode supports <code>Update</code> and <code>Ignore</code>. Use <code>Update</code> to apply changes for a sheet. Use <code>Ignore</code> to skip a sheet during import.</p>
+    <h3>SheetSetCustom</h3><p>Allows editing of existing Sheet Set Custom Properties. Users can update property values and choose whether they should be imported.</p>
+    <h3>NewCustomProperties</h3><p>Allows users to create new custom properties. The Scope column controls whether the property is created as a Sheet property or a Sheet Set property. ApplyToExistingSheets controls whether a default value is applied to existing sheets.</p>
+    <h3>Sheets</h3><p>Contains standard sheet information such as number, title, name, description, and publish-related data where applicable.</p>
+    <h3>SheetCustom_LongFormat</h3><p>A technical worksheet used for diagnostic or fallback purposes. The main import workflow uses SheetCustom_Matrix when available.</p>
+</section>
+<section id="safety">
+    <h2>Validation and Safety</h2>
+    <p>Validation should be run before every import. It reports standard sheet changes, sheet custom property changes, sheet set custom property changes, new custom property applications, and warnings.</p>
+    <p>The import process asks for confirmation before applying changes. A backup DST file is automatically created before modifications are made. The backup uses a timestamped filename such as:</p>
+    <div class="box"><code>Project_backup_YYYYMMDD_HHMMSS.dst</code></div>
+</section>
+<section id="notes">
+    <h2>Important Notes</h2>
+    <ul>
+        <li>Close Excel before running Validate or Import. If the workbook is still open in Excel, Windows may lock the file and prevent the application from reading or updating it.</li>
+        <li>Do not delete hidden technical columns from the workbook. They are used to match Excel rows back to Sheet Set objects.</li>
+        <li>Use Validate before Import to confirm that the detected changes match your expectations.</li>
+    </ul>
+</section>
+<section id="troubleshooting">
+    <h2>Troubleshooting</h2>
+    <h3>The command does not appear in AutoCAD</h3>
+    <p>Confirm that the application was installed using the MSI for the correct AutoCAD version. Restart AutoCAD after installation. The ribbon panel should appear under Add-ins &gt; Sheet Set Excel Editor.</p>
+    <h3>Excel file cannot be read</h3>
+    <p>Close Excel and try again. The XLSX file may be locked if it is still open.</p>
+    <h3>Import shows warnings</h3>
+    <p>Review the warning messages before continuing. Warnings may indicate missing sheets, changed sheet numbers, or workbook rows that cannot be matched to the selected DST file.</p>
+    <h3>The import did not apply expected changes</h3>
+    <p>Confirm that ImportMode is set to Update for the rows you want to import. Run Validate again and verify the detected change counts.</p>
+</section>
+<section id="support">
+    <h2>Support</h2>
+    <p>Website: <a href="https://www.lessard.xyz">https://www.lessard.xyz</a><br>Support: <a href="mailto:support@lessard.xyz">support@lessard.xyz</a><br>Privacy Policy: <a href="privacy.html">https://www.lessard.xyz/privacy</a></p>
+</section>
+<section id="version">
+    <h2>Version</h2>
+    <p>Version 1.0.0</p>
+    <p>Supported products: AutoCAD 2026, AutoCAD 2027, Civil 3D 2026 and Civil 3D 2027.</p>
+</section>
+</main>
+<footer><p>© 2026 Etienne Lessard</p><p><a href="index.html">Home</a> | <a href="privacy.html">Privacy Policy</a> | <a href="support.html">Support</a></p></footer>
+</body>
+</html>

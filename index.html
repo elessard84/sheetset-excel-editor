@@ -5,32 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sheet Set Excel Editor</title>
 <style>
-:root{--dark:#1f2933;--blue:#0067b8;--light:#f5f7fa;--border:#d9e2ec}
+:root{--dark:#1f2933;--dark2:#334e68;--blue:#0067b8;--light:#f5f7fa;--border:#d9e2ec;--text:#1f2933;--muted:#52606d}
 *{box-sizing:border-box}
-body{margin:0;font-family:Segoe UI,Arial,sans-serif;color:#1f2933;line-height:1.6;background:white}
-header{background:linear-gradient(135deg,#1f2933,#334e68);color:white;padding:70px 20px;text-align:center}
-.logo{max-width:260px;width:70%;margin-bottom:25px}
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;color:var(--text);line-height:1.6;background:white}
+a{color:var(--blue)}
+header{background:linear-gradient(135deg,var(--dark),var(--dark2));color:white;padding:70px 20px;text-align:center}
+.logo{max-width:270px;width:70%;margin-bottom:25px}
 header h1{font-size:3rem;margin:0 0 15px}
 header p{font-size:1.2rem;margin:0 0 15px}
-.buttons a{display:inline-block;margin:8px;padding:12px 20px;background:white;color:#1f2933;text-decoration:none;border-radius:6px;font-weight:600}
+.buttons a{display:inline-block;margin:8px;padding:12px 20px;background:white;color:var(--dark);text-decoration:none;border-radius:6px;font-weight:600}
 .container{max-width:1150px;margin:0 auto;padding:50px 20px}
 section{margin-bottom:65px}
-h2{font-size:2rem;margin-bottom:20px}
+h2{font-size:2rem;margin-bottom:20px} h3{margin-bottom:8px}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
 .card{border:1px solid var(--border);border-radius:10px;padding:22px;background:white}
 .workflow{background:var(--light);border:1px solid var(--border);padding:20px;border-radius:10px;font-family:Consolas,monospace;font-size:1.1rem;overflow:auto}
-table{width:100%;border-collapse:collapse}
-th,td{border:1px solid var(--border);padding:12px;text-align:left}
-th{background:var(--light)}
-.media{margin-bottom:35px}
-.media img,.media video{width:100%;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.12)}
-.note{color:#52606d}
-footer{background:#1f2933;color:white;text-align:center;padding:30px 20px}
-footer a{color:white}
+table{width:100%;border-collapse:collapse} th,td{border:1px solid var(--border);padding:12px;text-align:left} th{background:var(--light)}
+.media{margin-bottom:35px}.media img,.media video{width:100%;border:1px solid var(--border);border-radius:10px;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.note{color:var(--muted)}
+footer{background:var(--dark);color:white;text-align:center;padding:30px 20px} footer a{color:white}
 </style>
 </head>
 <body>
-
 <header>
     <img class="logo" src="images/ssee_logo.png" alt="Sheet Set Excel Editor logo">
     <h1>Sheet Set Excel Editor</h1>
@@ -39,33 +35,21 @@ footer a{color:white}
     <div class="buttons">
         <a href="#videos">Videos</a>
         <a href="#screenshots">Screenshots</a>
+        <a href="help.html">Help</a>
         <a href="support.html">Support</a>
         <a href="privacy.html">Privacy Policy</a>
     </div>
 </header>
-
 <main class="container">
-
 <section>
     <h2>Why use Sheet Set Excel Editor?</h2>
-    <p>
-        Managing Sheet Set properties one sheet at a time can be slow and error-prone.
-        Sheet Set Excel Editor enables bulk editing of Sheet Set data using Microsoft Excel
-        while maintaining validation and import controls.
-    </p>
-    <p>
-        Users can review changes before applying them and automatically create a backup
-        of the DST file before import.
-    </p>
+    <p>Managing Sheet Set properties one sheet at a time can be slow and error-prone. Sheet Set Excel Editor enables bulk editing of Sheet Set data using Microsoft Excel while maintaining validation and import controls.</p>
+    <p>Users can review changes before applying them and automatically create a backup of the DST file before import.</p>
 </section>
-
 <section>
     <h2>Workflow</h2>
-    <div class="workflow">
-        DST → Export XLSX → Edit in Excel → Validate → Import → DST
-    </div>
+    <div class="workflow">DST → Export XLSX → Edit in Excel → Validate → Import → DST</div>
 </section>
-
 <section id="features">
     <h2>Features</h2>
     <div class="grid">
@@ -74,10 +58,9 @@ footer a{color:white}
         <div class="card"><h3>Create Custom Properties</h3><p>Create new Sheet and Sheet Set custom properties from Excel.</p></div>
         <div class="card"><h3>Validate Before Import</h3><p>Review changes before updating the Sheet Set.</p></div>
         <div class="card"><h3>Safe Import</h3><p>Import validated changes back to the DST file with automatic backup creation.</p></div>
-        <div class="card"><h3>Ribbon Integration</h3><p>Access Export, Validate, Import and About directly from the AutoCAD ribbon.</p></div>
+        <div class="card"><h3>Ribbon Integration</h3><p>Access Export, Validate, Import, About and Help directly from the AutoCAD ribbon.</p></div>
     </div>
 </section>
-
 <section>
     <h2>Supported Capabilities</h2>
     <table>
@@ -92,110 +75,35 @@ footer a{color:white}
         <tr><td>Civil 3D 2026 / 2027</td><td>Supported</td></tr>
     </table>
 </section>
-
 <section id="videos">
     <h2>Videos</h2>
-
-    <div class="media">
-        <h3>Export Sheet Set Data</h3>
-        <p class="note">Export Sheet Set data from a DST file to an Excel workbook.</p>
-        <video controls preload="metadata">
-            <source src="videos/SSEE_EXPORT.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="media">
-        <h3>Create Custom Properties</h3>
-        <p class="note">Create new Sheet or Sheet Set custom properties in Excel.</p>
-        <video controls preload="metadata">
-            <source src="videos/SSEE_CREATE_CUSTOM.mp4" type="video/mp4">
-        </video>
-    </div>
-
-    <div class="media">
-        <h3>Import Changes</h3>
-        <p class="note">Import edited custom properties back into the Sheet Set.</p>
-        <video controls preload="metadata">
-            <source src="videos/SSEE_IMPORT.mp4" type="video/mp4">
-        </video>
-    </div>
+    <div class="media"><h3>Export Sheet Set Data</h3><p class="note">Export Sheet Set data from a DST file to an Excel workbook.</p><video controls preload="metadata"><source src="videos/SSEE_EXPORT.mp4" type="video/mp4"></video></div>
+    <div class="media"><h3>Create Custom Properties</h3><p class="note">Create new Sheet or Sheet Set custom properties in Excel.</p><video controls preload="metadata"><source src="videos/SSEE_CREATE_CUSTOM.mp4" type="video/mp4"></video></div>
+    <div class="media"><h3>Import Changes</h3><p class="note">Import edited custom properties back into the Sheet Set.</p><video controls preload="metadata"><source src="videos/SSEE_IMPORT.mp4" type="video/mp4"></video></div>
 </section>
-
 <section id="screenshots">
     <h2>Screenshots</h2>
-
-    <div class="media">
-        <h3>Ribbon Integration</h3>
-        <img src="images/ribbon.png" alt="Sheet Set Excel Editor ribbon">
-    </div>
-
-    <div class="media">
-        <h3>Export - Select DST File</h3>
-        <img src="images/export1.png" alt="Select Sheet Set DST file">
-    </div>
-
-    <div class="media">
-        <h3>Export - Save XLSX File</h3>
-        <img src="images/export2.png" alt="Save exported Excel workbook">
-    </div>
-
-    <div class="media">
-        <h3>Edit in Excel</h3>
-        <img src="images/excel-edit.png" alt="Edit Sheet Set data in Excel">
-    </div>
-
-    <div class="media">
-        <h3>Import - Select DST File</h3>
-        <img src="images/import1.png" alt="Select DST file for import">
-    </div>
-
-    <div class="media">
-        <h3>Import - Select XLSX File</h3>
-        <img src="images/import2.png" alt="Select XLSX file for import">
-    </div>
-
-    <div class="media">
-        <h3>Validation Result</h3>
-        <img src="images/validate.png" alt="Validation results in AutoCAD command line">
-    </div>
+    <div class="media"><h3>Ribbon Integration</h3><img src="images/ribbon.png" alt="Sheet Set Excel Editor ribbon"></div>
+    <div class="media"><h3>Export - Select DST File</h3><img src="images/export1.png" alt="Select Sheet Set DST file"></div>
+    <div class="media"><h3>Export - Save XLSX File</h3><img src="images/export2.png" alt="Save exported Excel workbook"></div>
+    <div class="media"><h3>Edit in Excel</h3><img src="images/excel-edit.png" alt="Edit Sheet Set data in Excel"></div>
+    <div class="media"><h3>Import - Select DST File</h3><img src="images/import1.png" alt="Select DST file for import"></div>
+    <div class="media"><h3>Import - Select XLSX File</h3><img src="images/import2.png" alt="Select XLSX file for import"></div>
+    <div class="media"><h3>Validation Result</h3><img src="images/validate.png" alt="Validation results in AutoCAD command line"></div>
 </section>
-
 <section>
     <h2>FAQ</h2>
-
-    <h3>Does the plugin modify my DST immediately?</h3>
-    <p>No. Changes can be reviewed using the validation command before import.</p>
-
-    <h3>Is a backup created?</h3>
-    <p>Yes. A timestamped backup of the DST file is automatically created before import.</p>
-
-    <h3>Can I add new custom properties?</h3>
-    <p>Yes. Both Sheet and Sheet Set custom properties can be created through Excel.</p>
-
-    <h3>Is Microsoft Excel required?</h3>
-    <p>Yes. The workflow uses XLSX files intended to be edited in Microsoft Excel.</p>
-
-    <h3>Which Autodesk products are supported?</h3>
-    <p>AutoCAD 2026, AutoCAD 2027, Civil 3D 2026 and Civil 3D 2027.</p>
+    <h3>Does the plugin modify my DST immediately?</h3><p>No. Changes can be reviewed using the validation command before import.</p>
+    <h3>Is a backup created?</h3><p>Yes. A timestamped backup of the DST file is automatically created before import.</p>
+    <h3>Can I add new custom properties?</h3><p>Yes. Both Sheet and Sheet Set custom properties can be created through Excel.</p>
+    <h3>Is Microsoft Excel required?</h3><p>Yes. The workflow uses XLSX files intended to be edited in Microsoft Excel.</p>
+    <h3>Which Autodesk products are supported?</h3><p>AutoCAD 2026, AutoCAD 2027, Civil 3D 2026 and Civil 3D 2027.</p>
 </section>
-
 <section>
     <h2>Support</h2>
-    <p>
-        Product: Sheet Set Excel Editor<br>
-        Version: 1.0<br>
-        Author: Etienne Lessard<br>
-        Website: www.lessard.xyz<br>
-        Email: support@lessard.xyz
-    </p>
+    <p>Product: Sheet Set Excel Editor<br>Version: 1.0.0<br>Author: Etienne Lessard<br>Website: www.lessard.xyz<br>Help: <a href="help.html">Online Help</a><br>Email: support@lessard.xyz</p>
 </section>
-
 </main>
-
-<footer>
-    <p>© 2026 Etienne Lessard</p>
-    <p><a href="privacy.html">Privacy Policy</a> | <a href="support.html">Support</a></p>
-</footer>
-
+<footer><p>© 2026 Etienne Lessard</p><p><a href="help.html">Help</a> | <a href="privacy.html">Privacy Policy</a> | <a href="support.html">Support</a></p></footer>
 </body>
 </html>
