@@ -48,7 +48,7 @@ footer{background:var(--dark);color:white;text-align:center;padding:30px 20px} f
 </section>
 <section>
     <h2>Workflow</h2>
-    <div class="workflow">DST → Export XLSX → Edit in Excel → Validate → Import → DST</div>
+    <div class="workflow">DST &rarr; Export XLSX &rarr; Edit in Excel &rarr; Review in Import &rarr; Confirm &rarr; DST</div>
 </section>
 <section id="features">
     <h2>Features</h2>
@@ -56,9 +56,9 @@ footer{background:var(--dark);color:white;text-align:center;padding:30px 20px} f
         <div class="card"><h3>Export to Excel</h3><p>Export Sheet Set data from DST files to XLSX format.</p></div>
         <div class="card"><h3>Bulk Edit</h3><p>Edit Sheet and Sheet Set custom properties directly in Excel.</p></div>
         <div class="card"><h3>Create Custom Properties</h3><p>Create new Sheet and Sheet Set custom properties from Excel.</p></div>
-        <div class="card"><h3>Validate Before Import</h3><p>Review changes before updating the Sheet Set.</p></div>
-        <div class="card"><h3>Safe Import</h3><p>Import validated changes back to the DST file with automatic backup creation.</p></div>
-        <div class="card"><h3>Ribbon Integration</h3><p>Access Export, Validate, Import, About and Help directly from the AutoCAD ribbon.</p></div>
+        <div class="card"><h3>Review Before Import</h3><p>Review detected changes and warnings before updating the Sheet Set.</p></div>
+        <div class="card"><h3>Safe Import</h3><p>Import approved changes back to the DST file with automatic backup creation.</p></div>
+        <div class="card"><h3>Ribbon Integration</h3><p>Access Export, Import, About and Help directly from the AutoCAD ribbon.</p></div>
     </div>
 </section>
 <section>
@@ -69,7 +69,7 @@ footer{background:var(--dark);color:white;text-align:center;padding:30px 20px} f
         <tr><td>Edit Sheet Custom Properties</td><td>Supported</td></tr>
         <tr><td>Edit Sheet Set Custom Properties</td><td>Supported</td></tr>
         <tr><td>Create New Custom Properties</td><td>Supported</td></tr>
-        <tr><td>Validation Before Import</td><td>Supported</td></tr>
+        <tr><td>Import Review and Warnings</td><td>Supported</td></tr>
         <tr><td>Automatic DST Backup</td><td>Supported</td></tr>
         <tr><td>AutoCAD 2026 / 2027</td><td>Supported</td></tr>
         <tr><td>AutoCAD-based vertical products 2026 / 2027</td><td>Supported</td></tr>
@@ -89,11 +89,10 @@ footer{background:var(--dark);color:white;text-align:center;padding:30px 20px} f
     <div class="media"><h3>Edit in Excel</h3><img src="images/excel-edit.png" alt="Edit Sheet Set data in Excel"></div>
     <div class="media"><h3>Import - Select DST File</h3><img src="images/import1.png" alt="Select DST file for import"></div>
     <div class="media"><h3>Import - Select XLSX File</h3><img src="images/import2.png" alt="Select XLSX file for import"></div>
-    <div class="media"><h3>Validation Result</h3><img src="images/validate.png" alt="Validation results in AutoCAD command line"></div>
 </section>
 <section>
     <h2>FAQ</h2>
-    <h3>Does the plugin modify my DST immediately?</h3><p>No. Changes can be reviewed using the validation command before import.</p>
+    <h3>Does the plugin modify my DST immediately?</h3><p>No. Import shows a review of detected changes and warnings before you confirm any DST update.</p>
     <h3>Is a backup created?</h3><p>Yes. A timestamped backup of the DST file is automatically created before import.</p>
     <h3>Can I add new custom properties?</h3><p>Yes. Both Sheet and Sheet Set custom properties can be created through Excel.</p>
     <h3>Is Microsoft Excel required?</h3><p>Yes. The workflow uses XLSX files intended to be edited in Microsoft Excel.</p>
@@ -101,7 +100,7 @@ footer{background:var(--dark);color:white;text-align:center;padding:30px 20px} f
 </section>
 <section>
     <h2>Support</h2>
-    <p>Product: Sheet Set Excel Editor<br>Version: 1.0.0<br>Author: Etienne Lessard<br>Website: www.lessard.xyz<br>Help: <a href="help.html">Online Help</a><br>Email: support@lessard.xyz</p>
+    <p>Product: Sheet Set Excel Editor<br>Version: 1.0.0<br>Author: Etienne Lessard<br>Website: <a href="https://cad.lessard.xyz/">cad.lessard.xyz</a><br>Help: <a href="help.html">Online Help</a><br>Email: support@lessard.xyz</p>
 </section>
 </main>
 <footer><p>© 2026 Etienne Lessard</p><p><a href="help.html">Help</a> | <a href="privacy.html">Privacy Policy</a> | <a href="support.html">Support</a></p></footer>
