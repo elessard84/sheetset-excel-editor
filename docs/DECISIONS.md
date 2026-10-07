@@ -19,4 +19,12 @@ Append-only. Newest first or oldest first — pick one and keep it.
   * Add AGENTS.md + docs/AUDIT.md + docs/DECISIONS.md.
 - Impact: docs/ folder created; 4 HTML files updated.
 - Status: applied.
+
+## 2026-10-07 — Suppression de validate.png
+
+- Context: L'image validate.png référençait une commande retirée
+  (SSEVALIDATEXLSX, intégrée à SSEIMPORT).
+- Decision: Supprimer définitivement images/validate.png.
+- Impact: 1 fichier supprimé, whitelist AUDIT.md mise à jour.
+- Status: applied.
 ---

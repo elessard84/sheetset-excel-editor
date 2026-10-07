@@ -56,7 +56,6 @@ Run it whenever the plugin changes or at least before any release.
 ### Whitelist (orphan images kept intentionally)
 
 
-- validate.png (retained for archive; not used in current workflow)
 - custom-property-creation.png (kept for future use)
 - DATA-MODIFICATION.png (kept for future use)
 
