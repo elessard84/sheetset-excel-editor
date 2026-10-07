@@ -27,4 +27,13 @@ Append-only. Newest first or oldest first — pick one and keep it.
 - Decision: Supprimer définitivement images/validate.png.
 - Impact: 1 fichier supprimé, whitelist AUDIT.md mise à jour.
 - Status: applied.
+
+## 2026-10-07 — Audit de synchro avec PRODUCT_FACTS.md
+
+- Contexte : PRODUCT_FACTS.md créé dans SheetSetManager comme
+  source de vérité unique.
+- Décision : audit du site confirmé IN SYNC, aucune correction requise.
+- Impact : aucun changement HTML. La procédure de synchro est
+  désormais documentée dans PRODUCT_FACTS.md §8.
+- Statut : IN SYNC.
 ---

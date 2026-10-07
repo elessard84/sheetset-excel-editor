@@ -72,3 +72,9 @@ Aucune référence cassée : les 7 images référencées dans `index.html` exist
 8. Cohérence inter-pages parfaite (nom, version, auteur, contacts).
 9. Métadonnées : `<title>` corrects ; `meta description` et Open Graph absents sur les 4 pages.
 10. Seules actions recommandées : supprimer `validate.png` (+ 2 images orphelines), ajouter `meta description`/OG, harmoniser le libellé de lien help.html:105.
+
+## Sync check vs PRODUCT_FACTS.md
+
+- Source : D:\Documents\GitHub\SheetSetManager\docs\PRODUCT_FACTS.md
+- Résultat : IN SYNC le 2026-10-07.
+- Aucun écart détecté.
