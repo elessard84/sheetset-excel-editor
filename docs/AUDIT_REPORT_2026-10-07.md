@@ -1,7 +1,7 @@
 # Audit du site web — Sheet Set Excel Editor
 
 - **Date :** 2026-10-07
-- **Dépôt :** `D:\Documents\GitHub\sheetset-excel-editor`
+- **Dépôt :** `elessard84/sheetset-excel-editor`
 - **Site :** https://cad.lessard.xyz (GitHub Pages, `CNAME` = `cad.lessard.xyz`)
 - **Produit :** Sheet Set Excel Editor v1.0.0 (Etienne Lessard)
 - **Mode :** lecture seule — aucune modification des fichiers HTML/images/vidéos.
@@ -75,6 +75,6 @@ Aucune référence cassée : les 7 images référencées dans `index.html` exist
 
 ## Sync check vs PRODUCT_FACTS.md
 
-- Source : D:\Documents\GitHub\SheetSetManager\docs\PRODUCT_FACTS.md
+- Source : `docs/PRODUCT_FACTS.md` dans le référentiel produit.
 - Résultat : IN SYNC le 2026-10-07.
 - Aucun écart détecté.

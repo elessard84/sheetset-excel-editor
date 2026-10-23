@@ -36,4 +36,21 @@ Append-only. Newest first or oldest first — pick one and keep it.
 - Impact : aucun changement HTML. La procédure de synchro est
   désormais documentée dans PRODUCT_FACTS.md §8.
 - Statut : IN SYNC.
+
+## 2026-10-23 — Harmonisation visuelle avec www.lessard.xyz
+
+- Contexte : harmonisation validée par le propriétaire après examen des deux
+  projets locaux et confirmation du CNAME du site CAD.
+- Décision : reprendre le bleu nuit, les accents bleus, la pile typographique
+  système et les composants visuels du site principal, avec des contenus clairs.
+  Garder le bandeau LE compact et le logo produit distinct sur l'accueil.
+  Utiliser le symbole pour fond sombre uniquement dans les en-têtes ; aucun
+  symbole LE n'est affiché sur fond clair ni répété dans les pieds de page.
+  Les pieds de page portent « © 2026 Etienne Lessard », avec un lien vers
+  https://www.lessard.xyz/. Réutiliser les deux favicons du site principal.
+- Impact : présentation des quatre pages, trois nouvelles ressources graphiques,
+  structure sémantique du tableau et documentation de la vérification locale.
+  Contenu produit, URL, ancres et ressources existantes conservés.
+- Statut : appliqué et testé localement ; validation finale requise avant
+  commit, push ou déploiement.
 ---
